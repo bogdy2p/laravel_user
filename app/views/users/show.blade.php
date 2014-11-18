@@ -1,8 +1,13 @@
-<?php
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <meta charset="utf-8">
+  <body> 
+    <h1>Hello, {{ $user->username }} </h1>
+    <h2> Your passwd is : {{$user->password}} </h2>
+ 
+</body>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+</html>
