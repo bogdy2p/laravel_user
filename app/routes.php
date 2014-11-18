@@ -1,5 +1,9 @@
 <?php
 
+Route::get('users', 'UsersController@index');
+
+
+
 Route::get('users', function() {
   $users = User::all();
 
