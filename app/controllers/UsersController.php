@@ -9,7 +9,8 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		 $users = User::all();
+     return View::make('users.index', ['users' => $users]);
 	}
 
 
@@ -21,6 +22,7 @@ class UsersController extends \BaseController {
 	public function create()
 	{
 		//
+    echo 'Function Create from users controller called';
 	}
 
 
@@ -32,6 +34,7 @@ class UsersController extends \BaseController {
 	public function store()
 	{
 		//
+    echo 'Function Store from users controller called';
 	}
 
 
@@ -41,9 +44,11 @@ class UsersController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($username)
 	{
-		//
+		$user = User::whereUsername($username)->first();
+
+  return View::make('users.show', ['user' => $user]);
 	}
 
 
@@ -56,6 +61,7 @@ class UsersController extends \BaseController {
 	public function edit($id)
 	{
 		//
+    echo 'Function Edit called from users controller. for id = '.$id;
 	}
 
 
