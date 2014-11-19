@@ -37,7 +37,7 @@ class UsersController extends \BaseController {
     $user->password = Hash::make(Input::get('password'));
     $user->save();
 
-    return Redirect.route('users.index');
+    return Redirect::route('users.index');
   }
 
   /**
