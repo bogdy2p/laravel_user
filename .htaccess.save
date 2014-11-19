@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine onRewriteBase /~new/    
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

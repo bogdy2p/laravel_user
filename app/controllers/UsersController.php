@@ -28,12 +28,15 @@ class UsersController extends \BaseController {
    */
   public function store() {
 
+    if (!User::isValid(Input::all())) {
+       return Redirect::back()->withInput()->withErrors(User::$error_messages);
+    }
+
     $user = new User;
     $user->username = Input::get('username');
     $user->password = Hash::make(Input::get('password'));
     $user->save();
-    
-    return Redirect::to('/users');
+
     return Redirect.route('users.index');
   }
 
