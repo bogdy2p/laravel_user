@@ -3,5 +3,11 @@
 Route::resource('users', 'UsersController');
 
 Route::get('/', function() {
-  return 'You Have reached the underworld of this website.';
+ 
+  User::create([
+    'username' => 'thepbc',
+    'email' => 'asd@asd.com',
+    'password'=> Hash::make('changeme')
+  ]);
+  return 'Done';
 });
