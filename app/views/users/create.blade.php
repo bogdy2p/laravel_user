@@ -5,7 +5,7 @@
   
   <h1> Create new User</h1>
   
-  {{ Form::open() }}
+  {{ Form::open(['route' => 'users.store']) }}
   
   <div>
   
